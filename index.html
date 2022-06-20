@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Operators</title>
+
+    </head>
+    <body>
+        <div>
+            
+          <input type="number" id="num1Input" placeholder="Enter Number 1">
+          
+            <select name="operator" id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <input type="number" id="num2Input" placeholder="Enter Number 2">
+          <input type="button" value="=" onclick = "calculate()">
+          <h1 id="result"></h1>
+        </div>
+        <script>
+            
+             function calculate(){
+                console.log(num1Input.value);
+                console.log(num2Input.value);
+
+                if(num1Input.value ==="" || num2Input.value===""){
+                     alert('Make surenyou have selected a number');
+                     result.innerHTML="Please enter both numbers";
+                }
+                else{
+                   if(operator.value==='-'){
+                        result.innerHTML = parseInt(num1Input.value) - parseInt(num2Input.value);
+                    }
+                     else if(operator.value==="*"){
+                        result.innerHTML = parseInt(num1Input.value) * parseInt(num2Input.value);
+                     }
+                      else if(operator.value==="/"){
+                         result.innerHTML = parseInt(num1Input.value) / parseInt(num2Input.value);
+                     }
+                     else{
+                       result.innerHTML = parseInt(num1Input.value) + parseInt(num2Input.value);
+                      }
+                }
+            }
+        </script>
+    </body>
+</html>
